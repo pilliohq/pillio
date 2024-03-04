@@ -59,6 +59,10 @@ This is a layered monolith application that consists of the following applicatio
 * `Pillio.HttpApi.Host`: ASP.NET Core API application that is used to expose the APIs to the clients.
 * `angular`: Angular application.
 
+### Run local services
+* Redis: brew services start redis
+* PostgreSql:  brew services start postgresql@16
+
 ### Deploying the application
 
 Deploying an ABP application is not different than deploying any .NET or ASP.NET Core application. However, there are some topics that you should care about when you are deploying your applications. You can check ABP's [Deployment documentation](https://docs.abp.io/en/abp/latest/Deployment/Index) before deploying your application.
