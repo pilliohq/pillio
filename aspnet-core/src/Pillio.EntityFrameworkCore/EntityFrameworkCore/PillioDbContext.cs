@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using App.Organizations;
+using App.Pharmacies;
+using Microsoft.EntityFrameworkCore;
+using Pillio.Common;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -51,6 +54,11 @@ public class PillioDbContext :
     public DbSet<Tenant> Tenants { get; set; }
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
+    public DbSet<CloudFile> CloudFiles { get; set; }
+    public DbSet<CareHome> CareHomes { get; set; }
+    public DbSet<DoctorOffice> DoctorOffices { get; set; }
+    public DbSet<Pharmacy> Pharmacies { get; set; }
+    public DbSet<Station> Stations { get; set; }
     #endregion
 
     public PillioDbContext(DbContextOptions<PillioDbContext> options)

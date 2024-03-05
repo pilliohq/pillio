@@ -1,16 +1,16 @@
 
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 
-namespace App.People
-{
+//namespace App.People
+//{
 
-    public interface IPatientManager 
-    {
-        Task GetNurseInChargeAsync();
+//    public interface IPatientManager 
+//    {
+//        Task GetNurseInChargeAsync();
 
-        Task GetMedicationInfoAsync();
+//        Task GetMedicationInfoAsync();
 
 
-        // public async 
-    }
-}
+//        // public async 
+//    }
+//}

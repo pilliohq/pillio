@@ -60,8 +60,11 @@ This is a layered monolith application that consists of the following applicatio
 * `angular`: Angular application.
 
 ### Run local services
+#### In MacOS
 * Redis: brew services start redis
 * PostgreSql:  brew services start postgresql@16
+#### In Ubuntu/WSL
+* Redis: sudo service redis-server start
 
 ### Deploying the application
 

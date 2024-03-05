@@ -15,6 +15,19 @@ function configureRoutes(routesService: RoutesService) {
         order: 1,
         layout: eLayoutType.application,
       },
+      {
+        path: '/care-home',
+        name: '::Menu:CareHome',
+        iconClass: 'fas fa-book',
+        order: 2,
+        layout: eLayoutType.application,
+      },
+      {
+        path: '/care-homes',
+        name: '::Menu:CareHomes',
+        parentName: '::Menu:CareHome',
+        layout: eLayoutType.application,
+      },
     ]);
   };
 }
