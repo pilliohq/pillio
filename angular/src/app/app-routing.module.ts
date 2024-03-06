@@ -26,7 +26,7 @@ const routes: Routes = [
       import('@abp/ng.setting-management').then(m => m.SettingManagementModule.forLazy()),
   },
   {
-    path: 'carehomes',
+    path: 'care-homes',
     loadChildren: () => import('./care-home/care-home.module').then(m => m.CareHomeModule),
   },
 ];
