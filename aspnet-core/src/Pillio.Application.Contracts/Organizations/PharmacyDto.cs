@@ -1,7 +1,7 @@
 ﻿using System;
 using Volo.Abp.Application.Dtos;
 
-namespace App.Pharmacies.Dtos
+namespace Pillio.Organizations.Pharmacies.Dtos
 {
     public class PharmacyDto : AuditedEntityDto<Guid>
     {

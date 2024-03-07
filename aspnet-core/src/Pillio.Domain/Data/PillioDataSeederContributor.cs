@@ -1,5 +1,5 @@
-﻿using App.Organizations;
-using App.Pharmacies;
+﻿using Pillio.Organizations;
+using Pillio.Organizations.Pharmacies;
 using System;
 using System.Collections.Generic;
 using System.Linq;

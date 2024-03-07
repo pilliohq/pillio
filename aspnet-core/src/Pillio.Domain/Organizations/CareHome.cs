@@ -6,7 +6,7 @@ using Pillio.Common;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace App.Organizations
+namespace Pillio.Organizations
 {
     [Table("CareHomes")]
     public class CareHome : FullAuditedAggregateRoot<Guid>

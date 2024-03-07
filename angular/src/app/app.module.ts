@@ -25,6 +25,7 @@ import { AccountLayoutModule } from '@abp/ng.theme.lepton-x/account';
     CoreModule.forRoot({
       environment,
       registerLocaleFn: registerLocale(),
+      tenantKey: 'PillioTenantKey'
     }),
     AbpOAuthModule.forRoot(),
     ThemeSharedModule.forRoot(),
@@ -43,4 +44,4 @@ import { AccountLayoutModule } from '@abp/ng.theme.lepton-x/account';
   providers: [APP_ROUTE_PROVIDER],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

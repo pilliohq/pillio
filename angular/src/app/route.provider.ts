@@ -28,6 +28,33 @@ function configureRoutes(routesService: RoutesService) {
         parentName: '::Menu:CareHome',
         layout: eLayoutType.application,
       },
+      {
+        path: '/pharmacy', // Updated path
+        name: '::Menu:Pharmacy', // Updated name
+        iconClass: 'fas fa-book', // Keep the icon class if it's appropriate
+        order: 2,
+        layout: eLayoutType.application,
+      },
+      {
+        path: '/pharmacies', // Updated path
+        name: '::Menu:Pharmacies', // Updated name
+        parentName: '::Menu:Pharmacy', // Updated parentName
+        layout: eLayoutType.application,
+      },
+      {
+        path: '/doctor-office', // Updated path
+        name: '::Menu:DoctorOffice', // Updated name
+        iconClass: 'fas fa-book', // Keep the icon class if it's appropriate
+        order: 2,
+        layout: eLayoutType.application,
+      },
+      {
+        path: '/doctor-offices', // Updated path
+        name: '::Menu:DoctorOffices', // Updated name
+        parentName: '::Menu:DoctorOffice', // Updated parentName
+        layout: eLayoutType.application,
+      },
+
     ]);
   };
 }

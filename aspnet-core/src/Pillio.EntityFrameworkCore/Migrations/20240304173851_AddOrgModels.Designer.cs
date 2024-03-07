@@ -27,7 +27,7 @@ namespace Pillio.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("App.Organizations.CareHome", b =>
+            modelBuilder.Entity("Pillio.Organizations.CareHome", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
@@ -112,7 +112,7 @@ namespace Pillio.Migrations
                     b.ToTable("CareHomes");
                 });
 
-            modelBuilder.Entity("App.Organizations.DoctorOffice", b =>
+            modelBuilder.Entity("Pillio.Organizations.DoctorOffice", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
@@ -188,7 +188,7 @@ namespace Pillio.Migrations
                     b.ToTable("DoctorOffices");
                 });
 
-            modelBuilder.Entity("App.Organizations.Station", b =>
+            modelBuilder.Entity("Pillio.Organizations.Station", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
@@ -210,7 +210,7 @@ namespace Pillio.Migrations
                     b.ToTable("Stations");
                 });
 
-            modelBuilder.Entity("App.Pharmacies.Pharmacy", b =>
+            modelBuilder.Entity("Pillio.Organizations.Pharmacies.Pharmacy", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
@@ -2097,7 +2097,7 @@ namespace Pillio.Migrations
                     b.ToTable("AbpTenantConnectionStrings", (string)null);
                 });
 
-            modelBuilder.Entity("App.Organizations.CareHome", b =>
+            modelBuilder.Entity("Pillio.Organizations.CareHome", b =>
                 {
                     b.HasOne("Pillio.Common.CloudFile", "Avatar")
                         .WithMany()
@@ -2106,7 +2106,7 @@ namespace Pillio.Migrations
                     b.Navigation("Avatar");
                 });
 
-            modelBuilder.Entity("App.Organizations.DoctorOffice", b =>
+            modelBuilder.Entity("Pillio.Organizations.DoctorOffice", b =>
                 {
                     b.HasOne("Pillio.Common.CloudFile", "Avatar")
                         .WithMany()
@@ -2115,14 +2115,14 @@ namespace Pillio.Migrations
                     b.Navigation("Avatar");
                 });
 
-            modelBuilder.Entity("App.Organizations.Station", b =>
+            modelBuilder.Entity("Pillio.Organizations.Station", b =>
                 {
-                    b.HasOne("App.Organizations.CareHome", null)
+                    b.HasOne("Pillio.Organizations.CareHome", null)
                         .WithMany("Stations")
                         .HasForeignKey("CareHomeId");
                 });
 
-            modelBuilder.Entity("App.Pharmacies.Pharmacy", b =>
+            modelBuilder.Entity("Pillio.Organizations.Pharmacies.Pharmacy", b =>
                 {
                     b.HasOne("Pillio.Common.CloudFile", "Avatar")
                         .WithMany()
@@ -2273,7 +2273,7 @@ namespace Pillio.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("App.Organizations.CareHome", b =>
+            modelBuilder.Entity("Pillio.Organizations.CareHome", b =>
                 {
                     b.Navigation("Stations");
                 });

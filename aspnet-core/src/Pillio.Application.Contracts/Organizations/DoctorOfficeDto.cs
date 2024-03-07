@@ -1,7 +1,7 @@
 ﻿using System;
 using Volo.Abp.Application.Dtos;
 
-namespace App.Organizations.Dtos
+namespace Pillio.Organizations.Dtos
 {
     public class DoctorOfficeDto : AuditedEntityDto<Guid>
     {

@@ -1,9 +1,9 @@
 import { LIST_QUERY_DEBOUNCE_TIME, ListService, PagedResultDto } from '@abp/ng.core';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { CareHomeDto } from '@proxy/app/organizations/dtos';
 import { CareHomeService } from '@proxy/organizations';
 import { ConfirmationService, Confirmation } from '@abp/ng.theme.shared';
+import { CareHomeDto } from '@proxy/organizations/dtos';
 
 @Component({
   selector: 'app-care-home',

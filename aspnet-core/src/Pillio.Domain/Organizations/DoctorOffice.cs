@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Volo.Abp.Domain.Entities.Auditing;
 using Pillio.Common;
 
-namespace App.Organizations
+namespace Pillio.Organizations
 {
     [Table("DoctorOffices")]
     public class DoctorOffice : FullAuditedAggregateRoot<Guid>

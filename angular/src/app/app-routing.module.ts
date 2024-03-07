@@ -29,10 +29,18 @@ const routes: Routes = [
     path: 'care-homes',
     loadChildren: () => import('./care-home/care-home.module').then(m => m.CareHomeModule),
   },
+  {
+    path: 'doctor-offices',
+    loadChildren: () => import('./doctor-office/doctor-office.module').then(m => m.DoctorOfficeModule),
+  },
+  {
+    path: 'phamacies',
+    loadChildren: () => import('./pharmacy/pharmacy.module').then(m => m.PharmacyModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {})],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

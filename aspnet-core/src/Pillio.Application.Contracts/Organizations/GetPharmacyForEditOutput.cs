@@ -1,4 +1,4 @@
-﻿namespace App.Pharmacies.Dtos
+﻿namespace Pillio.Organizations.Pharmacies.Dtos
 {
     public class GetPharmacyForEditOutput
     {

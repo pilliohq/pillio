@@ -1,4 +1,4 @@
-import type { CareHomeDto, CreateOrEditCareHomeDto } from './dtos/models';
+import type { CreateOrEditPharmacyDto, PharmacyDto } from './pharmacies/dtos/models';
 import { RestService, Rest } from '@abp/ng.core';
 import type { PagedAndSortedResultRequestDto, PagedResultDto } from '@abp/ng.core';
 import { Injectable } from '@angular/core';
@@ -6,14 +6,14 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class CareHomeService {
+export class PharmacyService {
   apiName = 'Default';
   
 
-  create = (input: CreateOrEditCareHomeDto, config?: Partial<Rest.Config>) =>
-    this.restService.request<any, CareHomeDto>({
+  create = (input: CreateOrEditPharmacyDto, config?: Partial<Rest.Config>) =>
+    this.restService.request<any, PharmacyDto>({
       method: 'POST',
-      url: '/api/app/care-home',
+      url: '/api/app/pharmacy',
       body: input,
     },
     { apiName: this.apiName,...config });
@@ -22,32 +22,32 @@ export class CareHomeService {
   delete = (id: string, config?: Partial<Rest.Config>) =>
     this.restService.request<any, void>({
       method: 'DELETE',
-      url: `/api/app/care-home/${id}`,
+      url: `/api/app/pharmacy/${id}`,
     },
     { apiName: this.apiName,...config });
   
 
   get = (id: string, config?: Partial<Rest.Config>) =>
-    this.restService.request<any, CareHomeDto>({
+    this.restService.request<any, PharmacyDto>({
       method: 'GET',
-      url: `/api/app/care-home/${id}`,
+      url: `/api/app/pharmacy/${id}`,
     },
     { apiName: this.apiName,...config });
   
 
   getList = (input: PagedAndSortedResultRequestDto, config?: Partial<Rest.Config>) =>
-    this.restService.request<any, PagedResultDto<CareHomeDto>>({
+    this.restService.request<any, PagedResultDto<PharmacyDto>>({
       method: 'GET',
-      url: '/api/app/care-home',
+      url: '/api/app/pharmacy',
       params: { sorting: input.sorting, skipCount: input.skipCount, maxResultCount: input.maxResultCount },
     },
     { apiName: this.apiName,...config });
   
 
-  update = (id: string, input: CreateOrEditCareHomeDto, config?: Partial<Rest.Config>) =>
-    this.restService.request<any, CareHomeDto>({
+  update = (id: string, input: CreateOrEditPharmacyDto, config?: Partial<Rest.Config>) =>
+    this.restService.request<any, PharmacyDto>({
       method: 'PUT',
-      url: `/api/app/care-home/${id}`,
+      url: `/api/app/pharmacy/${id}`,
       body: input,
     },
     { apiName: this.apiName,...config });

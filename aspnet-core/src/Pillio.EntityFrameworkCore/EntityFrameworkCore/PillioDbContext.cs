@@ -1,5 +1,5 @@
-﻿using App.Organizations;
-using App.Pharmacies;
+﻿using Pillio.Organizations;
+using Pillio.Organizations.Pharmacies;
 using Microsoft.EntityFrameworkCore;
 using Pillio.Common;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;

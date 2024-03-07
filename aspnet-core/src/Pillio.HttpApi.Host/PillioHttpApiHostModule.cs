@@ -30,6 +30,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.Security.Claims;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Abp.AspNetCore.MultiTenancy;
 
 namespace Pillio;
 
@@ -59,6 +60,11 @@ public class PillioHttpApiHostModule : AbpModule
         ConfigureDistributedLocking(context, configuration);
         ConfigureCors(context, configuration);
         ConfigureSwaggerServices(context, configuration);
+        Configure<AbpAspNetCoreMultiTenancyOptions>(options =>
+        {
+            options.TenantKey = "PillioTenantKey";
+        });
+
     }
 
     private void ConfigureCache(IConfiguration configuration)
