@@ -1,6 +1,4 @@
-﻿using Volo.Abp;
-
-namespace Pillio.EntityFrameworkCore;
+﻿namespace Pillio.EntityFrameworkCore;
 
 public abstract class PillioEntityFrameworkCoreTestBase : PillioTestBase<PillioEntityFrameworkCoreTestModule>
 {

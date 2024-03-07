@@ -1,5 +1,4 @@
-﻿using Pillio.EntityFrameworkCore;
-using Xunit;
+﻿using Xunit;
 
 namespace Pillio.EntityFrameworkCore;
 

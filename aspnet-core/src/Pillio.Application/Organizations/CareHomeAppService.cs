@@ -1,5 +1,4 @@
-﻿using Pillio.Organizations;
-using Pillio.Organizations.Dtos;
+﻿using Pillio.Organizations.Dtos;
 using System;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;

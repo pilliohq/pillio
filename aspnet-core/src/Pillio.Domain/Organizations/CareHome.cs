@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Volo.Abp.Domain.Entities.Auditing;
 using Pillio.Common;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Pillio.Organizations

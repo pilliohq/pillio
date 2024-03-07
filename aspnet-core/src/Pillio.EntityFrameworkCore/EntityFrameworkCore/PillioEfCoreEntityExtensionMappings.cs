@@ -1,10 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Volo.Abp.AuditLogging;
-using Volo.Abp.Identity;
-using Volo.Abp.ObjectExtending;
-using Volo.Abp.PermissionManagement;
-using Volo.Abp.TenantManagement;
-using Volo.Abp.Threading;
+﻿using Volo.Abp.Threading;
 
 namespace Pillio.EntityFrameworkCore;
 
