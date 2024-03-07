@@ -60,6 +60,10 @@ This is a layered monolith application that consists of the following applicatio
 * `angular`: Angular application.
 
 ### Run local services
+
+### Create pillio user
+CREATE USER pillio SUPERUSER PASSWORD 'pillio123';
+
 #### In MacOS
 * Redis: brew services start redis
 * PostgreSql:  brew services start postgresql@16

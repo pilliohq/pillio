@@ -1,8 +1,13 @@
 {
-  "culture": "en",
-  "texts": {
-    "Menu:Home": "Home",
-    "Welcome": "Welcome",
-    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io."
-  }
+    "culture": "en",
+    "texts": {
+        "Menu:Home": "Home",
+        "Welcome": "Welcome",
+        "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
+        "Permission:Pillio": "Care Home",
+        "Permission:CareHomes": "Care Home Management",
+        "Permission:CareHomes.Create": "Creating new care homes",
+        "Permission:CareHomes.Edit": "Editing the care homes",
+        "Permission:CareHomes.Delete": "Deleting the care homes"
+    }
 }
