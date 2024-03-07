@@ -1,4 +1,9 @@
-﻿using Volo.Abp.Threading;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Pillio.Enums;
+using Volo.Abp.ObjectExtending;
+using Volo.Abp.TenantManagement;
+using Volo.Abp.Threading;
 
 namespace Pillio.EntityFrameworkCore;
 
@@ -36,7 +41,9 @@ public static class PillioEfCoreEntityExtensionMappings
              * See the documentation for more:
              * https://docs.abp.io/en/abp/latest/Customizing-Application-Modules-Extending-Entities
              */
-  
+            ObjectExtensionManager.Instance
+                 .MapEfCoreProperty<Tenant, TenantType?>(nameof(Pillio.Domains.Tenant.Type), (EntityTypeBuilder, propertyBuilder) => { })
+                 .MapEfCoreProperty<Tenant, Guid?>(nameof(Pillio.Domains.Tenant.OrganizationId), (EntityTypeBuilder, propertyBuilder) => { });
         });
     }
 }
