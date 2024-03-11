@@ -2,6 +2,7 @@
 using Pillio.Organizations.Dtos;
 using Pillio.Organizations.Pharmacies.Dtos;
 using AutoMapper;
+using Pillio.People;
 
 namespace Pillio;
 
@@ -18,5 +19,14 @@ public class PillioApplicationAutoMapperProfile : Profile
         CreateMap<CreateOrEditDoctorOfficeDto, DoctorOffice>();
         CreateMap<Pharmacy,PharmacyDto>();
         CreateMap<CreateOrEditPharmacyDto, Pharmacy>(); 
+
+        CreateMap<Patient, PatientDto>();
+        CreateMap<CreateOrEditPatientDto, Patient>();
+
+        CreateMap<InsuranceCard, InsuranceCardDto>();
+        CreateMap<CreateUpdateInsuranceCardDto, InsuranceCard>();
+
+        CreateMap<TimePlan, TimePlanDto>();
+        CreateMap<CreateUpdateTimePlanDto, TimePlan>();
     }
 }

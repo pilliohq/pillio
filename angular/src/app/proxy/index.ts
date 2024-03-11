@@ -1,2 +1,4 @@
+import * as Enums from './enums';
 import * as Organizations from './organizations';
-export { Organizations };
+import * as People from './people';
+export { Enums, Organizations, People };
