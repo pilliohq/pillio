@@ -1,8 +1,6 @@
-﻿using Volo.Abp.Application.Dtos;
-
-namespace Pillio.Organizations.Dtos
+﻿namespace Pillio.Organizations.Dtos
 {
-    
+
     public class GetAllCareHomesInput : PagedAndSortedResultRequestDto
     {
         public string? Filter { get; set; }

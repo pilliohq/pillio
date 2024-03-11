@@ -1,7 +1,4 @@
-﻿using System;
-using Volo.Abp.Application.Dtos;
-
-namespace Pillio.Organizations.Dtos
+﻿namespace Pillio.Organizations.Dtos
 {
     public class StationDto : EntityDto<Guid>
     {

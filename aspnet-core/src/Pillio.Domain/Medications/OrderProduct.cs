@@ -1,5 +1,3 @@
-using Pillio.Domains;
-
 namespace Pillio.Medications;
 
 [Table("OrderProducts")]
