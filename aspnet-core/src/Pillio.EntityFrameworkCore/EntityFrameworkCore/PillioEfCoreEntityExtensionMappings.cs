@@ -1,5 +1,4 @@
 ﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Pillio.Enums;
 using Volo.Abp.ObjectExtending;
 using Volo.Abp.TenantManagement;

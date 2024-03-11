@@ -1,17 +1,15 @@
-//using System;
-//using System.ComponentModel.DataAnnotations.Schema;
-//using Volo.Abp.Domain.Entities.Auditing;
+using Pillio.Medications;
 
-//namespace Pillio.People;
+namespace Pillio.People;
 
-//public class MedicationIntake : CreationAuditedEntity<long>
-//{
-//    public DateTime Date { get; set; }
-//    public float Amount { get; set; }
+public class MedicationIntake : CreationAuditedEntity<long>
+{
+   public DateTime Date { get; set; }
+   public float Amount { get; set; }
 
-//    public virtual long OrderProductId { get; set; }
+   public virtual long OrderProductId { get; set; }
 
-//    [ForeignKey("MedicationPlanProductId")]
-//    public OrderProduct Product { get; set; }
+   [ForeignKey("MedicationPlanProductId")]
+   public OrderProduct Product { get; set; }
 
-//}
+}

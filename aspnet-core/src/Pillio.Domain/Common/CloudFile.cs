@@ -1,8 +1,3 @@
-using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using Volo.Abp.Domain.Entities.Auditing;
-using Volo.Abp.MultiTenancy;
-
 namespace Pillio.Common;
 
 [Table("CloudFiles")]

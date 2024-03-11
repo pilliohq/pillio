@@ -1,6 +1,3 @@
-using System;
-using Pillio.Enums;
-
 namespace Pillio.Domains;
 
 public class Tenant

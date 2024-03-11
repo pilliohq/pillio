@@ -1,0 +1,13 @@
+global using Pillio.Enums;
+global using System.ComponentModel.DataAnnotations;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using System;
+global using AutoMapper.Configuration.Annotations;
+global using System.Collections.Generic;
+global using Volo.Abp.Domain.Entities.Auditing;
+global using Volo.Abp.MultiTenancy;
+global using Pillio.People;
+global using Pillio.Organizations;
+global using Pillio.Organizations.Pharmacies;
+global using Volo.Abp.Domain.Entities;
+global using Pillio.Common;

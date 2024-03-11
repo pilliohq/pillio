@@ -1,8 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using Volo.Abp.Domain.Entities;
-
-namespace Pillio.Organizations
+﻿namespace Pillio.Organizations
 {
     [Table("Stations")]
     public class Station : Entity<Guid>

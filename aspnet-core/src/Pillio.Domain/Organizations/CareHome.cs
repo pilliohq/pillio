@@ -1,11 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Volo.Abp.Domain.Entities.Auditing;
-using Pillio.Common;
-using System.Collections.Generic;
-
-namespace Pillio.Organizations
+﻿namespace Pillio.Organizations
 {
     [Table("CareHomes")]
     public class CareHome : FullAuditedAggregateRoot<Guid>
