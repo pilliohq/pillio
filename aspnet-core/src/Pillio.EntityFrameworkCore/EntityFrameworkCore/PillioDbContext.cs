@@ -1,5 +1,4 @@
 ﻿using Pillio.Organizations;
-using Pillio.Organizations.Pharmacies;
 using Microsoft.EntityFrameworkCore;
 using Pillio.Common;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
@@ -15,6 +14,8 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using Pillio.Medications;
+using Pillio.People;
 
 namespace Pillio.EntityFrameworkCore;
 
@@ -59,6 +60,21 @@ public class PillioDbContext :
     public DbSet<DoctorOffice> DoctorOffices { get; set; }
     public DbSet<Pharmacy> Pharmacies { get; set; }
     public DbSet<Station> Stations { get; set; }
+
+    public DbSet<MedicationOrder> MedicationOrders { get; set; }
+    public DbSet<MedicationPlan> MedicationPlans { get; set; }
+    public DbSet<MedicationPlanProduct> MedicationPlanProducts { get; set; }
+    public DbSet<MedicationPlanWorkflowInfo> MedicationPlanWorkflowInfos { get; set; }
+    public DbSet<OrderProduct> OrderProducts { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<InsuranceCard> InsuranceCards { get; set; }
+    public DbSet<MedicationIntake> MedicationIntakes { get; set; }
+    public DbSet<Nurse> Nurses { get; set; }
+    public DbSet<Patient> Patients { get; set; }
+    public DbSet<PatientVisit> PatientVisits { get; set; }
+    public DbSet<TimePlan> TimePlans { get; set; }
+
+
     #endregion
 
     public PillioDbContext(DbContextOptions<PillioDbContext> options)

@@ -1,6 +1,6 @@
 namespace Pillio.Domains;
 
-public class Tenant
+public class TenantExt
 {
     public TenantType? Type { get; set; }
 

@@ -1,11 +1,13 @@
+using Pillio.Domains;
+
 namespace Pillio.Medications;
 
 [Table("OrderProducts")]
 
-public class OrderProduct : FullAuditedEntity<long>, IMultiTenant
+public class OrderProduct : FullAuditedEntity<Guid>, IMultiTenant
 {
     public Guid? TenantId { get; set; }
-    public long MedicationPlanProductId { get; set; }
+    public Guid MedicationPlanProductId { get; set; }
 
     [ForeignKey("MedicationPlanProductId")]
     public MedicationPlanProduct MedicationPlanProduct { get; set; }
@@ -22,8 +24,8 @@ public class OrderProduct : FullAuditedEntity<long>, IMultiTenant
 
     public DateTime? StatusLastChanged { get; set; }
 
-    public int? WorkflowPersonInChargeId { get; set; }
-    public Tenant WorkflowPersonInCharge { get; set; }//doctor or pharmacy
+    public Guid? WorkflowPersonInChargeId { get; set; }
+    public Volo.Abp.TenantManagement.Tenant WorkflowPersonInCharge { get; set; }//doctor or pharmacy
     public virtual DateTime StartDate { get; set; }
 
     public virtual DateTime? CurrentBatchEndDate { get; set; }
@@ -56,9 +58,5 @@ public class OrderProduct : FullAuditedEntity<long>, IMultiTenant
         //TODO: calculate for other frequency
         return StartDate.AddDays(Count);
     }
-
-    public virtual DateTime? LastCountUpdate { get; set; }
-    public virtual long? LastCountUpdateById { get; set; }
-    public virtual string LastCountUpdateByName { get; set; }
 
 }

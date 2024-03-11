@@ -1,7 +1,7 @@
 ﻿namespace Pillio.Medications
 {
     [Table("MedicationPlanProducts")]
-    public class MedicationPlanProduct : FullAuditedEntity<long>, IMultiTenant
+    public class MedicationPlanProduct : FullAuditedEntity<Guid>, IMultiTenant
     {
         public MedicationPlanProduct()
         {
@@ -23,17 +23,17 @@
 
         public virtual string ProductName => Product?.Name;
 
-        public virtual long? MedicationPlanId { get; set; }
+        public virtual Guid? MedicationPlanId { get; set; }
 
         [ForeignKey("MedicationPlanId")]
         public MedicationPlan MedicationPlan{ get; set; }
 
-        public virtual long? CurrentOrderId { get; set; }
+        public virtual Guid? CurrentOrderId { get; set; }
 
         [ForeignKey("CurrentOrderId")]
         public MedicationOrder CurrentOrder { get; set; }
 
-        public virtual int? ProductId { get; set; }
+        public virtual Guid? ProductId { get; set; }
 
         [ForeignKey("ProductId")]
         public Product Product{ get; set; }

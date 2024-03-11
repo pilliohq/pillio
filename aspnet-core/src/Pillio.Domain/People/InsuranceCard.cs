@@ -3,7 +3,7 @@
 namespace Pillio.People;
 
 [Table("InsuranceCards")]
-public class InsuranceCard : Entity<int>
+public class InsuranceCard : Entity<Guid>
 {
 
     [Required]

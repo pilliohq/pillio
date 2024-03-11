@@ -3,19 +3,19 @@ using Pillio.Medications;
 namespace Pillio.People;
 
 [Table("PatientVisit")]
-public class PatientVisit : FullAuditedEntity<long>, IMultiTenant
+public class PatientVisit : FullAuditedEntity<Guid>, IMultiTenant
 {
    public Guid? TenantId { get; set; }
 
-   public long MedicationOrderId { get; set; }
+   public Guid MedicationOrderId { get; set; }
    [ForeignKey("MedicationOrderId")]
    public MedicationOrder MedicationOrder { get; set; }
 
-   public long NurseId { get; set; }
+   public Guid NurseId { get; set; }
    [ForeignKey("NurseId")]
    public virtual Nurse Nurse { get; set; }
 
-   public virtual int PatientId { get; set; }
+   public virtual Guid PatientId { get; set; }
 
    [ForeignKey("PatientId")]
    public Patient Patient { get; set; }

@@ -1,7 +1,7 @@
 namespace Pillio.People;
 
 [Table("Nurses")]
-public class Nurse : Entity<long>, IMultiTenant
+public class Nurse : Entity<Guid>, IMultiTenant
 {
     public Guid? TenantId { get; set; }
 

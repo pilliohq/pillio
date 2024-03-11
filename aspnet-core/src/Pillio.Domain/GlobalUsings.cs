@@ -8,6 +8,5 @@ global using Volo.Abp.Domain.Entities.Auditing;
 global using Volo.Abp.MultiTenancy;
 global using Pillio.People;
 global using Pillio.Organizations;
-global using Pillio.Organizations.Pharmacies;
 global using Volo.Abp.Domain.Entities;
 global using Pillio.Common;

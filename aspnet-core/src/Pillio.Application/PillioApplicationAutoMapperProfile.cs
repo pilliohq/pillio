@@ -1,6 +1,5 @@
 ﻿using Pillio.Organizations;
 using Pillio.Organizations.Dtos;
-using Pillio.Organizations.Pharmacies;
 using Pillio.Organizations.Pharmacies.Dtos;
 using AutoMapper;
 

@@ -1,4 +1,4 @@
-﻿namespace Pillio.Organizations.Pharmacies
+﻿namespace Pillio.Organizations
 {
     [Table("Pharmacies")]
     public class Pharmacy : FullAuditedAggregateRoot<Guid>

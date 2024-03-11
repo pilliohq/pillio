@@ -2,7 +2,7 @@
 namespace Pillio.Medications;
 
 [Table("MedicationOrders")]
-public class MedicationOrder : FullAuditedEntity<long>, IMultiTenant
+public class MedicationOrder : FullAuditedEntity<Guid>, IMultiTenant
 {
     public Guid? TenantId { get; set; }
 

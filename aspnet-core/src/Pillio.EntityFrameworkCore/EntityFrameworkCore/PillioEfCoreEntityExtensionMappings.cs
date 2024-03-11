@@ -41,8 +41,8 @@ public static class PillioEfCoreEntityExtensionMappings
              * https://docs.abp.io/en/abp/latest/Customizing-Application-Modules-Extending-Entities
              */
             ObjectExtensionManager.Instance
-                 .MapEfCoreProperty<Tenant, TenantType?>(nameof(Pillio.Domains.Tenant.Type), (EntityTypeBuilder, propertyBuilder) => { })
-                 .MapEfCoreProperty<Tenant, Guid?>(nameof(Pillio.Domains.Tenant.OrganizationId), (EntityTypeBuilder, propertyBuilder) => { });
+                 .MapEfCoreProperty<Tenant, TenantType?>(nameof(Pillio.Domains.TenantExt.Type), (EntityTypeBuilder, propertyBuilder) => { })
+                 .MapEfCoreProperty<Tenant, Guid?>(nameof(Pillio.Domains.TenantExt.OrganizationId), (EntityTypeBuilder, propertyBuilder) => { });
         });
     }
 }

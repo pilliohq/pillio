@@ -1,6 +1,6 @@
 ﻿namespace Pillio.People;
 [Table("TimePlans")]
-public class TimePlan : Entity<int>
+public class TimePlan : Entity<Guid>
 {
     public int? TenantId { get; set; }
 

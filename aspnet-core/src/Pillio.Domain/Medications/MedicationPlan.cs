@@ -4,7 +4,7 @@ using Volo.Abp.TenantManagement;
 namespace Pillio.Medications
 {
     [Table("MedicationPlans")]
-    public class MedicationPlan : FullAuditedAggregateRoot<long>, IMultiTenant
+    public class MedicationPlan : FullAuditedAggregateRoot<Guid>, IMultiTenant
     {
         public Guid? TenantId { get; set; }
 

@@ -53,13 +53,13 @@ public class Patient : AggregateRoot<Guid>, IMultiTenant
     [ForeignKey("DoctorOfficeId")]
     public DoctorOffice? DoctorOffice { get; set; }
 
-    public virtual int? InsuranceCardId { get; set; }
+    public virtual Guid? InsuranceCardId { get; set; }
 
     [Ignore]
     [ForeignKey("InsuranceCardId")]
     public InsuranceCard? InsuranceCard { get; set; }
 
-    public virtual int? TimePlanId { get; set; }
+    public virtual Guid? TimePlanId { get; set; }
 
     [ForeignKey("TimePlanId")]
     public TimePlan? TimePlan { get; set; }
