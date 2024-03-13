@@ -3,7 +3,7 @@
 namespace Pillio.People;
 
 [Table("Patients")]
-public class Patient : AggregateRoot<Guid>, IMultiTenant
+public class Patient : FullAuditedAggregateRoot<Guid>, IMultiTenant
 {
     public Guid? TenantId { get; set; }
 

@@ -36,7 +36,7 @@ public class OrderProduct : FullAuditedEntity<Guid>, IMultiTenant
     public long? MedicationOrderId { get; set; }
 
     [ForeignKey("PatientId")]
-    public MedicationOrder MedicationOrder { get; set; }
+    public MedicationOrder? MedicationOrder { get; set; }
 
     public DateTime CalculateEndDate()
     {

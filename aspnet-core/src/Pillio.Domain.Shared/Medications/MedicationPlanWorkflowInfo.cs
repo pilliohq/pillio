@@ -1,3 +1,6 @@
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Pillio.Medications
 {
     [NotMapped]
@@ -22,7 +25,7 @@ namespace Pillio.Medications
 
         public bool? IsCompleted { get; set; }
 
-        public string Notes { get; set; }
+        public string? Notes { get; set; }
 
         public WorkflowMoreInfo MoreInfo { get; set; } = new WorkflowMoreInfo();
     }

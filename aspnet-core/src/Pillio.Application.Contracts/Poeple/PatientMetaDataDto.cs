@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Pillio.People
 {
     public class PatientMetaDataDto

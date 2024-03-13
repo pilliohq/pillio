@@ -1,7 +1,6 @@
 using Pillio.Organizations.Pharmacies.Dtos;
 using System;
 using Volo.Abp.Application.Dtos;
-using Volo.Abp.Application.Services;
 
 namespace Pillio.Organizations
 {
