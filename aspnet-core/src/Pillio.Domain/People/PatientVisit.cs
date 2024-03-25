@@ -27,9 +27,9 @@ public class PatientVisit : FullAuditedEntity<Guid>, IMultiTenant
    public bool DosingSchedule3 { get; set; }
 
 
-   public List<MedicationIntake> MedicationIntakes { get; set; } = new List<MedicationIntake>();
+   public List<MedicationIntake> MedicationIntakes { get; set; } = [];
 
-   public virtual List<CloudFile> AudioNotes { get; set; } = new List<CloudFile>();
+   public virtual List<CloudFile> AudioNotes { get; set; } = [];
 
    public string NotesSummary { get; set; }
 

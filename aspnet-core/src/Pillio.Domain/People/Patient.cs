@@ -77,7 +77,7 @@ public class Patient : FullAuditedAggregateRoot<Guid>, IMultiTenant
 
     public Guid? AvatarId { get; set; }
     [ForeignKey("AvatarId")]
-    public virtual CloudFile? Avatar{ get; set; }
+    public virtual CloudFile? Avatar { get; set; }
 
 
     public Guid? LeadNurseId { get; set; }
@@ -92,7 +92,9 @@ public class Patient : FullAuditedAggregateRoot<Guid>, IMultiTenant
     public string? FamilyPhone { get; set; }
     public string? FamilyEmail { get; set; }
 
-    public virtual ICollection<MedicationOrder> Orders { get; set; }
+    public virtual ICollection<MedicationOrder> Orders { get; set; } = [];
+
+    public virtual ICollection<MedicationPlan> MedicationPlans { get; set; } = [];
 
     public PatientMetaData MetaData { get; set; } = new PatientMetaData();
 }
@@ -100,17 +102,17 @@ public class Patient : FullAuditedAggregateRoot<Guid>, IMultiTenant
 [NotMapped]
 public class PatientMetaData
 {
-    public List<string> HealthStatuses { get; set; } = new List<string>();
+    public List<string> HealthStatuses { get; set; } = [];
 
-    public string BloodPressure { get; set; }
+    public string? BloodPressure { get; set; }
 
     public virtual float BloodPressureIncrease { get; set; }
 
     public virtual float BloodSugarInCrease { get; set; }
 
-    public string BloodSugar { get; set; }
+    public string? BloodSugar { get; set; }
 
-    public List<string> Symptoms { get; set; } = new List<string>();
+    public List<string> Symptoms { get; set; } = [];
 
-    public List<string> CommonSymptomsAndSideEffects = new List<string>();
+    public List<string> CommonSymptomsAndSideEffects = [];
 }

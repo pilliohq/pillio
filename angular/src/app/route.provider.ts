@@ -54,7 +54,18 @@ function configureRoutes(routesService: RoutesService) {
         parentName: '::Menu:DoctorOffice', // Updated parentName
         layout: eLayoutType.application,
       },
-
+      {
+        path: '/patients', // Updated path
+        name: '::Patient', // Updated name
+        iconClass: 'fas fa-book', 
+        layout: eLayoutType.application,
+      },
+      {
+        path: '/medication-plans', // Updated path
+        name: '::MedicationPlan', // Updated name
+        iconClass: 'fas fa-book', 
+        layout: eLayoutType.application,
+      },
     ]);
   };
 }

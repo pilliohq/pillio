@@ -55,8 +55,8 @@ export class PatientComponent implements OnInit {
 
   buildForm() {
     this.form = this.fb.group({
-      name: [this.selectedPatient.firstName || '', Validators.required],
-      // Include other properties as needed
+      firstName: [this.selectedPatient.firstName || '', Validators.required],
+      lastName: [this.selectedPatient.lastName || '', Validators.required],
     });
   }
 

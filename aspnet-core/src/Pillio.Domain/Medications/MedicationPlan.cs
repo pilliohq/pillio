@@ -14,15 +14,15 @@ namespace Pillio.Medications
         public Patient? Patient { get; set; }
 
         public Guid? CareHomeTenantId { get; set; }
-        public Guid? FamilyDoctorTenantId { get; set; }
+        public Guid? DoctorTenantId { get; set; }
         public Guid? PharmacyTenantId { get; set; }
 
 
         [ForeignKey("CareHomeTenantId")]
         public Tenant? CareHomeTenant { get; set; }
 
-        [ForeignKey("FamilyDoctorTenantId")]
-        public Tenant? FamilyDoctorTenant { get; set; }
+        [ForeignKey("DoctorTenantId")]
+        public Tenant? DoctorTenant { get; set; }
 
         [ForeignKey("PharmacyTenantId")]
         public Tenant? PharmacyTenant { get; set; }

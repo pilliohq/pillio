@@ -66,8 +66,8 @@ namespace Pillio.Data
                 await _careHomeRepository.InsertAsync(new CareHome(_guidGenerator.Create())
                 {
                     Name = "Pflegeheim Berlin",
-                    Stations = new List<Station>
-                    {
+                    Stations =
+                    [
                         new Station (_guidGenerator.Create())
                         {
                             Name = "Mitte 1",
@@ -80,14 +80,14 @@ namespace Pillio.Data
                         {
                             Name = "Mitte 3",
                         }
-                    },
+                    ],
                     CareHomeTenantId = careHome.Id
                 });
                 await _careHomeRepository.InsertAsync(new CareHome(_guidGenerator.Create())
                 {
                     Name = "Demo Pflegeheim",
-                    Stations = new List<Station>
-                    {
+                    Stations =
+                    [
                         new Station(_guidGenerator.Create())
                         {
                             Name = "Mitte 1",
@@ -100,7 +100,7 @@ namespace Pillio.Data
                         {
                             Name = "Mitte 3",
                         }
-                    },
+                    ],
                     CareHomeTenantId = careHome2.Id
                 });
 

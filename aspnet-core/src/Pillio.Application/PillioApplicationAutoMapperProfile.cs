@@ -17,11 +17,14 @@ public class PillioApplicationAutoMapperProfile : Profile
         CreateMap<CreateOrEditCareHomeDto, CareHome>();
         CreateMap<DoctorOffice, DoctorOfficeDto>();
         CreateMap<CreateOrEditDoctorOfficeDto, DoctorOffice>();
-        CreateMap<Pharmacy,PharmacyDto>();
-        CreateMap<CreateOrEditPharmacyDto, Pharmacy>(); 
+        CreateMap<Pharmacy, PharmacyDto>();
+        CreateMap<CreateOrEditPharmacyDto, Pharmacy>();
 
         CreateMap<Patient, PatientDto>();
         CreateMap<CreateOrEditPatientDto, Patient>();
+
+        CreateMap<PatientMetaDataDto, PatientMetaData>();
+        CreateMap<PatientMetaData, PatientMetaDataDto>();
 
         CreateMap<InsuranceCard, InsuranceCardDto>();
         CreateMap<CreateUpdateInsuranceCardDto, InsuranceCard>();

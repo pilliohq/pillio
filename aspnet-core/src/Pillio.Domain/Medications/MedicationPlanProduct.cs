@@ -19,7 +19,7 @@
 
         public virtual string Notes { get; set; }
 
-        public virtual List<string> WeeklyFrequencyDays { get; set; } = new List<string>();
+        public virtual List<string> WeeklyFrequencyDays { get; set; } = [];
 
         public virtual string ProductName => Product?.Name;
 

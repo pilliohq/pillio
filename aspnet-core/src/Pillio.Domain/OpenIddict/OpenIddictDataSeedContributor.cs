@@ -89,12 +89,12 @@ public class OpenIddictDataSeedContributor : IDataSeedContributor, ITransientDep
                 consentType: OpenIddictConstants.ConsentTypes.Implicit,
                 displayName: "Console Test / Angular Application",
                 secret: null,
-                grantTypes: new List<string> {
+                grantTypes: [
                     OpenIddictConstants.GrantTypes.AuthorizationCode,
                     OpenIddictConstants.GrantTypes.Password,
                     OpenIddictConstants.GrantTypes.ClientCredentials,
                     OpenIddictConstants.GrantTypes.RefreshToken
-                },
+                ],
                 scopes: commonScopes,
                 redirectUri: consoleAndAngularClientRootUrl,
                 clientUri: consoleAndAngularClientRootUrl,
@@ -116,7 +116,7 @@ public class OpenIddictDataSeedContributor : IDataSeedContributor, ITransientDep
                 consentType: OpenIddictConstants.ConsentTypes.Implicit,
                 displayName: "Swagger Application",
                 secret: null,
-                grantTypes: new List<string> { OpenIddictConstants.GrantTypes.AuthorizationCode, },
+                grantTypes: [OpenIddictConstants.GrantTypes.AuthorizationCode,],
                 scopes: commonScopes,
                 redirectUri: $"{swaggerRootUrl}/swagger/oauth2-redirect.html",
                 clientUri: swaggerRootUrl
